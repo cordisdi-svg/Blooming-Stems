@@ -1,0 +1,129 @@
+{
+  "identity": {
+    "persona": "E1",
+    "archetype": "The Cozy Artisan",
+    "vibe": "Warm, Organic, Intimate, Hand-crafted, Trustworthy",
+    "principles": [
+      "Fusion: Digital Chat x Analog Stationery",
+      "Emotion: Every interaction feels like a hug",
+      "Texture: Paper, grain, and petals over flat colors",
+      "Motion: Slow, organic, easing-out (no abrupt cuts)"
+    ]
+  },
+  "palette": {
+    "primary": {
+      "name": "Sage Stem",
+      "hex": "#8A9A5B",
+      "tailwind": "bg-[#8A9A5B] text-white"
+    },
+    "secondary": {
+      "name": "Blush Petal",
+      "hex": "#F4C2C2",
+      "tailwind": "bg-[#F4C2C2] text-[#4A4A4A]"
+    },
+    "accent": {
+      "name": "Lavender Mist",
+      "hex": "#E6E6FA",
+      "tailwind": "bg-[#E6E6FA]"
+    },
+    "background": {
+      "name": "Cream Paper",
+      "hex": "#FFFDF5",
+      "tailwind": "bg-[#FFFDF5]"
+    },
+    "text": {
+      "primary": "#2D2D2D",
+      "secondary": "#5A5A5A",
+      "handwritten": "#4A4A4A"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font": "Dancing Script",
+      "weights": ["700"],
+      "usage": "Main Hero Title, Section Headers",
+      "fallback": "cursive"
+    },
+    "subheadings": {
+      "font": "Playfair Display",
+      "weights": ["600", "italic"],
+      "usage": "Product Names, Pull Quotes",
+      "fallback": "serif"
+    },
+    "body": {
+      "font": "Quicksand",
+      "weights": ["400", "500"],
+      "usage": "Paragraphs, UI Elements, Chat Text",
+      "fallback": "sans-serif"
+    },
+    "special": {
+      "font": "Courier Prime",
+      "weights": ["400"],
+      "usage": "Typewriter Effect in About Section",
+      "fallback": "monospace"
+    }
+  },
+  "layout_strategy": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing": "Relaxed (py-20 or py-32 for sections)",
+    "grid": "Asymmetric Bento Grid for Gallery (Mode A from E1 rules)",
+    "scroll": "Vertical smooth scroll (Lenis recommended)"
+  },
+  "components": {
+    "hero": {
+      "style": "Full-screen immersive",
+      "background": "Flower Image 2 (Soft Sunlit) with subtle overlay",
+      "card": "Glassmorphism (White/70) with handwritten signature"
+    },
+    "reviews_chat": {
+      "concept": "Messenger App Simulation",
+      "animation": "Staggered slide-in from left (user) and right (owner/reply)",
+      "style": "Bubble shapes with tails. Left bubbles: White bg. Right bubbles: Sage Green bg.",
+      "interaction": "Click to expand long reviews"
+    },
+    "about_notebook": {
+      "concept": "Digital Scrapbook",
+      "left_col": "Notebook Paper Texture + CSS Lines + Typewriter Animation",
+      "right_col": "Clean typography with 'taped' photo look"
+    },
+    "gallery": {
+      "style": "Masonry/Bento Grid",
+      "hover": "Zoom-in + Sepia to Color transition"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1764423805989-ec426dfb8de8?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "about_texture": "https://images.unsplash.com/photo-1754828393875-8974feebf9d6?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "gallery_1": "https://images.unsplash.com/photo-1763770474462-062cf57c6945?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "gallery_2": "https://images.unsplash.com/photo-1764425698432-e9e63e461751?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "gallery_3": "https://images.unsplash.com/photo-1762969217711-563c71c395af?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "gallery_4": "https://images.unsplash.com/photo-1764423805989-ec426dfb8de8?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "gallery_5": "https://images.unsplash.com/photo-1763770474462-062cf57c6945?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "icons": "Lucide React (Leaf, Heart, MessageCircle, MapPin, Phone)"
+  },
+  "animations": {
+    "libraries": ["framer-motion"],
+    "rules": [
+      "No instant appearances. Everything fades or slides.",
+      "Chat bubbles must have 'spring' physics.",
+      "Typewriter cursor must blink."
+    ]
+  },
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds, use textures.",
+    "Buttons should be 'pill' shaped with soft shadows.",
+    "Use 'data-testid' for all interactive elements.",
+    "Ensure text contrast meets APCA standards (dark grey on pastels)."
+  ],
+  "instructions_to_main_agent": [
+    "1. Install dependencies: framer-motion, lucide-react, clsx, tailwind-merge.",
+    "2. Configure Tailwind with the custom pastel palette.",
+    "3. Import Google Fonts in index.css: Dancing Script, Playfair Display, Quicksand, Courier Prime.",
+    "4. Build the 'ChatReviews' component using framer-motion for the entrance animation.",
+    "5. Build the 'Typewriter' component for the About section.",
+    "6. Use the provided Unsplash URLs for the gallery and backgrounds.",
+    "7. Ensure the site is responsive (mobile-first)."
+  ]
+}
