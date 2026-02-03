@@ -5,7 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List
 import uuid
 from datetime import datetime, timezone
@@ -37,6 +37,22 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactInquiry(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    email: EmailStr
+    phone: str | None = None
+    message: str
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class ContactInquiryCreate(BaseModel):
+    name: str
+    email: EmailStr
+    phone: str | None = None
+    message: str
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -65,6 +81,18 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+@api_router.post("/contact", response_model=ContactInquiry)
+async def create_contact_inquiry(input: ContactInquiryCreate):
+    inquiry_dict = input.model_dump()
+    inquiry_obj = ContactInquiry(**inquiry_dict)
+    
+    # Convert to dict and serialize datetime to ISO string for MongoDB
+    doc = inquiry_obj.model_dump()
+    doc['timestamp'] = doc['timestamp'].isoformat()
+    
+    _ = await db.contact_inquiries.insert_one(doc)
+    return inquiry_obj
 
 # Include the router in the main app
 app.include_router(api_router)
