@@ -35,7 +35,7 @@ const reviews = [
   },
   {
     name: 'M "Bigg Daddy"',
-    text: 'Thank you, Nice Stems for the jaw-dropping floral arrangement for our aunts' going home ceremony at our church- she never liked funeral-looking flowers and you did not disappoint- Truly breathtaking.',
+    text: "Thank you, Nice Stems for the jaw-dropping floral arrangement for our aunts' going home ceremony at our church- she never liked funeral-looking flowers and you did not disappoint- Truly breathtaking.",
     side: 'right',
     delay: 6
   }
