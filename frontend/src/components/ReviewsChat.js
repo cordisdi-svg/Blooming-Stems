@@ -29,7 +29,7 @@ const reviews = [
   },
   {
     name: 'Dick DeAngelis',
-    text: 'Bill was great - so friendly. He helped us send a beautiful arrangement to a Denver friend even though we lived in another state. He'll take good care of you.',
+    text: "Bill was great - so friendly. He helped us send a beautiful arrangement to a Denver friend even though we lived in another state. He'll take good care of you.",
     side: 'left',
     delay: 4.8
   },
