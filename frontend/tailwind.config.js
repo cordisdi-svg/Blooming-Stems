@@ -19,19 +19,19 @@ module.exports = {
     extend: {
       colors: {
         sage: {
-          DEFAULT: '#8A9A5B',
-          light: '#A4B87A',
+          DEFAULT: '#3b3470',
+          light: '#5a4aa6',
         },
         blush: {
-          DEFAULT: '#F4C2C2',
-          light: '#FBE4E4',
+          DEFAULT: '#d66bb7',
+          light: '#f0a6da',
         },
         lavender: {
-          DEFAULT: '#E6E6FA',
-          light: '#F2F2FC',
+          DEFAULT: '#8f86e8',
+          light: '#c5b9ff',
         },
         cream: {
-          DEFAULT: '#FFFDF5',
+          DEFAULT: '#14122b',
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,7 +68,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        handwritten: ['Dancing Script', 'cursive'],
+        handwritten: ['Manrope', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
         sans: ['Quicksand', 'sans-serif'],
         mono: ['Courier Prime', 'monospace'],

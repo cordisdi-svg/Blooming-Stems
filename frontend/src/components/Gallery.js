@@ -4,27 +4,27 @@ import { X } from 'lucide-react';
 
 const galleryImages = [
   {
-    url: 'https://customer-assets.emergentagent.com/job_6e1c3fc4-4e47-44a9-8b50-ad6b69a18149/artifacts/br3uxzi1_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20124632.png',
+    url: `${process.env.PUBLIC_URL}/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20124632.png`,
     title: 'Sunflower & Roses',
     description: 'Vibrant arrangement with sunflowers, roses, and purple mums'
   },
   {
-    url: 'https://customer-assets.emergentagent.com/job_6e1c3fc4-4e47-44a9-8b50-ad6b69a18149/artifacts/gqi03b37_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20124712.png',
+    url: `${process.env.PUBLIC_URL}/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132635.png`,
     title: 'Yellow & White Garden',
     description: 'Cheerful yellow roses with delicate white daisies'
   },
   {
-    url: 'https://customer-assets.emergentagent.com/job_6e1c3fc4-4e47-44a9-8b50-ad6b69a18149/artifacts/i9c9f1ls_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132635.png',
+    url: `${process.env.PUBLIC_URL}/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132724.png`,
     title: 'Pink & Yellow Mix',
     description: 'Elegant pink roses and freesias with bright yellow accents'
   },
   {
-    url: 'https://customer-assets.emergentagent.com/job_6e1c3fc4-4e47-44a9-8b50-ad6b69a18149/artifacts/42iqljz6_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132724.png',
+    url: `${process.env.PUBLIC_URL}/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132707.png`,
     title: 'Spring Bouquet',
     description: 'Colorful mix of tulips, peonies, and ranunculus'
   },
   {
-    url: 'https://customer-assets.emergentagent.com/job_6e1c3fc4-4e47-44a9-8b50-ad6b69a18149/artifacts/a1adxyvu_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132707.png',
+    url: `${process.env.PUBLIC_URL}/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-02-03%20132654.png`,
     title: 'Pure Elegance',
     description: 'Simple yet stunning white tulips arrangement'
   }
@@ -35,7 +35,7 @@ const Gallery = () => {
 
   return (
     <section 
-      className="py-20 sm:py-32 bg-gradient-to-b from-cream to-blush-light"
+      className="py-20 sm:py-32 bg-transparent"
       data-testid="gallery-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ const Gallery = () => {
           <h2 className="font-handwritten text-4xl sm:text-5xl text-sage mb-4" data-testid="gallery-title">
             Our Arrangements
           </h2>
-          <p className="font-sans text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="font-sans text-white/70 text-lg max-w-2xl mx-auto">
             Every bouquet is handcrafted with love and attention to detail
           </p>
         </motion.div>

@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <section 
       id="contact"
-      className="py-20 sm:py-32 bg-white"
+      className="py-20 sm:py-32 bg-transparent"
       data-testid="contact-section"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +60,7 @@ const Contact = () => {
           <h2 className="font-handwritten text-4xl sm:text-5xl text-sage mb-4" data-testid="contact-title">
             Get in Touch
           </h2>
-          <p className="font-sans text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="font-sans text-white/70 text-lg max-w-2xl mx-auto">
             Have questions or ready to order? We'd love to hear from you!
           </p>
         </motion.div>
@@ -70,11 +70,11 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="bg-cream rounded-3xl p-8 sm:p-12 shadow-xl"
+          className="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 shadow-xl border border-white/15"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block font-sans font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block font-sans font-medium text-white/80 mb-2">
                 Your Name *
               </label>
               <input
@@ -84,14 +84,14 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-sage/30 focus:border-sage focus:ring-2 focus:ring-sage/20 outline-none transition-all font-sans"
+                className="w-full px-4 py-3 rounded-xl border border-white/20 focus:border-blush focus:ring-2 focus:ring-blush/30 outline-none transition-all font-sans bg-white/10 text-white placeholder:text-white/40"
                 placeholder="John Doe"
                 data-testid="contact-name-input"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block font-sans font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block font-sans font-medium text-white/80 mb-2">
                 Email Address *
               </label>
               <input
@@ -101,14 +101,14 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-sage/30 focus:border-sage focus:ring-2 focus:ring-sage/20 outline-none transition-all font-sans"
+                className="w-full px-4 py-3 rounded-xl border border-white/20 focus:border-blush focus:ring-2 focus:ring-blush/30 outline-none transition-all font-sans bg-white/10 text-white placeholder:text-white/40"
                 placeholder="john@example.com"
                 data-testid="contact-email-input"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block font-sans font-medium text-gray-700 mb-2">
+              <label htmlFor="phone" className="block font-sans font-medium text-white/80 mb-2">
                 Phone Number
               </label>
               <input
@@ -117,14 +117,14 @@ const Contact = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-sage/30 focus:border-sage focus:ring-2 focus:ring-sage/20 outline-none transition-all font-sans"
+                className="w-full px-4 py-3 rounded-xl border border-white/20 focus:border-blush focus:ring-2 focus:ring-blush/30 outline-none transition-all font-sans bg-white/10 text-white placeholder:text-white/40"
                 placeholder="(720) 706-6937"
                 data-testid="contact-phone-input"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block font-sans font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block font-sans font-medium text-white/80 mb-2">
                 Your Message *
               </label>
               <textarea
@@ -134,7 +134,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 rounded-xl border border-sage/30 focus:border-sage focus:ring-2 focus:ring-sage/20 outline-none transition-all font-sans resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-white/20 focus:border-blush focus:ring-2 focus:ring-blush/30 outline-none transition-all font-sans resize-none bg-white/10 text-white placeholder:text-white/40"
                 placeholder="Tell us about the occasion or what you're looking for..."
                 data-testid="contact-message-input"
               ></textarea>
@@ -183,8 +183,8 @@ const Contact = () => {
             </button>
           </form>
 
-          <div className="mt-8 pt-8 border-t border-sage/20 text-center">
-            <p className="font-sans text-gray-600 mb-3">Or reach us directly:</p>
+          <div className="mt-8 pt-8 border-t border-white/15 text-center">
+            <p className="font-sans text-white/70 mb-3">Or reach us directly:</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+17207066937"
@@ -192,7 +192,7 @@ const Contact = () => {
               >
                 +1 (720) 706-6937
               </a>
-              <span className="hidden sm:inline text-gray-300">•</span>
+              <span className="hidden sm:inline text-white/40">•</span>
               <a
                 href="https://maps.app.goo.gl/vKibmwLTcL7ZMq7y6"
                 target="_blank"

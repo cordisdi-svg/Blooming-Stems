@@ -7,16 +7,61 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+const VideoSection = ({ children }) => (
+  <section className="video-section">
+    <div className="video-wall" aria-hidden="true">
+      <div className="video-pane">
+        <video className="video-media" autoPlay muted loop playsInline preload="auto">
+          <source
+            src={`${process.env.PUBLIC_URL}/images/111.webm`}
+            type="video/webm"
+          />
+          <source
+            src={`${process.env.PUBLIC_URL}/images/111.mp4`}
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div className="video-pane">
+        <video className="video-media" autoPlay muted loop playsInline preload="auto">
+          <source
+            src={`${process.env.PUBLIC_URL}/images/222.webm`}
+            type="video/webm"
+          />
+          <source
+            src={`${process.env.PUBLIC_URL}/images/222.mp4`}
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div className="video-overlay" />
+    </div>
+    <div className="video-content">{children}</div>
+  </section>
+);
+
 function App() {
   return (
     <div className="App bg-cream min-h-screen">
       <Hero />
-      <About />
-      <ReviewsChat />
-      <Services />
-      <Gallery />
-      <Contact />
-      <Footer />
+      <VideoSection>
+        <About />
+      </VideoSection>
+      <VideoSection>
+        <ReviewsChat />
+      </VideoSection>
+      <VideoSection>
+        <Services />
+      </VideoSection>
+      <VideoSection>
+        <Gallery />
+      </VideoSection>
+      <VideoSection>
+        <Contact />
+      </VideoSection>
+      <VideoSection>
+        <Footer />
+      </VideoSection>
     </div>
   );
 }
