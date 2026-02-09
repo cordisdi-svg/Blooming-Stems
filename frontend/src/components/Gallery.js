@@ -35,7 +35,7 @@ const Gallery = () => {
 
   return (
     <section 
-      className="py-20 sm:py-32 bg-gradient-to-b from-cream to-blush-light"
+      className="py-20 sm:py-32 bg-transparent"
       data-testid="gallery-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ const Gallery = () => {
           <h2 className="font-handwritten text-4xl sm:text-5xl text-sage mb-4" data-testid="gallery-title">
             Our Arrangements
           </h2>
-          <p className="font-sans text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="font-sans text-white/70 text-lg max-w-2xl mx-auto">
             Every bouquet is handcrafted with love and attention to detail
           </p>
         </motion.div>

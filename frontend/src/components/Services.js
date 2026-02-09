@@ -32,7 +32,7 @@ const services = [
 const Services = () => {
   return (
     <section 
-      className="py-20 sm:py-32 bg-white"
+      className="py-20 sm:py-32 bg-transparent"
       data-testid="services-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ const Services = () => {
           <h2 className="font-handwritten text-4xl sm:text-5xl text-sage mb-4" data-testid="services-title">
             Our Services
           </h2>
-          <p className="font-sans text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="font-sans text-white/70 text-lg max-w-2xl mx-auto">
             From everyday bouquets to extraordinary celebrations, we're here for all your floral needs
           </p>
         </motion.div>
@@ -65,18 +65,18 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="bg-cream rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all"
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-white/15"
                 data-testid={`service-card-${index}`}
               >
                 <div className={`${bgColor} w-14 h-14 rounded-full flex items-center justify-center mb-4`}>
                   <Icon className="w-7 h-7 text-white" />
                 </div>
                 
-                <h3 className="font-serif text-xl font-semibold text-gray-800 mb-3">
+                <h3 className="font-serif text-xl font-semibold text-white mb-3">
                   {service.title}
                 </h3>
                 
-                <p className="font-sans text-gray-600 leading-relaxed">
+                <p className="font-sans text-white/70 leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>

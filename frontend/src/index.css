@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@400;500&family=Courier+Prime:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@400;500&family=Courier+Prime:wght@400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFFDF5;
+    background-color: #14122b;
 }
 
 code {

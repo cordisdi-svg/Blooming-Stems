@@ -20,7 +20,7 @@ const Typewriter = ({ text, onComplete }) => {
   }, [currentIndex, text, onComplete]);
 
   return (
-    <div className="font-mono text-[#4A4A4A] text-base leading-relaxed">
+    <div className="font-mono text-white/80 text-base leading-relaxed">
       {displayedText}
       <span className="animate-blink">|</span>
     </div>
@@ -61,7 +61,7 @@ We believe flowers aren't just decorations—they're messengers of love, comfort
   return (
     <section 
       ref={sectionRef}
-      className="py-20 sm:py-32 bg-cream"
+      className="py-20 sm:py-32 bg-transparent"
       data-testid="about-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,9 +85,9 @@ We believe flowers aren't just decorations—they're messengers of love, comfort
             className="relative"
           >
             <div 
-              className="bg-white/90 rounded-lg shadow-xl p-8 sm:p-10"
+              className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8 sm:p-10 border border-white/15"
               style={{
-                backgroundImage: 'linear-gradient(transparent 31px, #E0E0E0 1px)',
+                backgroundImage: 'linear-gradient(transparent 31px, rgba(255, 255, 255, 0.18) 1px)',
                 backgroundSize: '100% 32px',
                 position: 'relative',
               }}
@@ -112,48 +112,48 @@ We believe flowers aren't just decorations—they're messengers of love, comfort
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="bg-lavender-light rounded-2xl p-8 shadow-lg">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-white/15">
               <div className="flex items-start gap-4">
                 <div className="bg-sage rounded-full p-3">
                   <Leaf className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="font-serif text-xl font-semibold text-white mb-2">
                     Fresh & Unique
                   </h3>
-                  <p className="font-sans text-gray-600">
+                  <p className="font-sans text-white/70">
                     We source unique and uncommon flowers to create arrangements that stand out. Every bouquet is handcrafted with fresh, carefully selected blooms.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blush-light rounded-2xl p-8 shadow-lg">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-white/15">
               <div className="flex items-start gap-4">
                 <div className="bg-sage rounded-full p-3">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="font-serif text-xl font-semibold text-white mb-2">
                     Personal Touch
                   </h3>
-                  <p className="font-sans text-gray-600">
+                  <p className="font-sans text-white/70">
                     Bill personally takes your order, listens to your vision, and creates something spectacular tailored to your occasion and the recipient.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-sage/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-white/15">
               <div className="flex items-start gap-4">
                 <div className="bg-sage rounded-full p-3">
                   <Truck className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="font-serif text-xl font-semibold text-white mb-2">
                     Fast & Reliable
                   </h3>
-                  <p className="font-sans text-gray-600">
+                  <p className="font-sans text-white/70">
                     Same-day delivery available throughout the Denver metro area. We're here when you need us, even at the last minute.
                   </p>
                 </div>
