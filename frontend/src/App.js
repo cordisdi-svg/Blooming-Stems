@@ -11,12 +11,49 @@ function App() {
   return (
     <div className="App bg-cream min-h-screen">
       <Hero />
-      <About />
-      <ReviewsChat />
-      <Services />
-      <Gallery />
-      <Contact />
-      <Footer />
+      <div className="relative overflow-hidden">
+        <div className="video-wall" aria-hidden="true">
+          <div className="video-pane">
+            <video
+              className="video-media"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            >
+              <source
+                src={`${process.env.PUBLIC_URL}/images/111.mp4`}
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div className="video-pane">
+            <video
+              className="video-media"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            >
+              <source
+                src={`${process.env.PUBLIC_URL}/images/222.mp4`}
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div className="video-overlay" />
+        </div>
+        <div className="relative z-10">
+          <About />
+          <ReviewsChat />
+          <Services />
+          <Gallery />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
