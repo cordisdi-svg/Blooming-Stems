@@ -96,11 +96,11 @@ const ChatBubble = ({ review, shouldAnimate }) => {
         <div
           className={`rounded-2xl p-4 shadow-md ${
             review.side === 'left' 
-              ? 'bg-white rounded-tl-none' 
-              : 'bg-sage text-white rounded-tr-none'
+              ? 'bg-white/10 backdrop-blur-md border border-white/15 rounded-tl-none text-white' 
+              : 'bg-sage/80 text-white rounded-tr-none'
           }`}
         >
-          <p className={`font-sans text-sm mb-2 ${review.side === 'right' ? 'text-white' : 'text-gray-700'}`}>
+          <p className={`font-sans text-sm mb-2 ${review.side === 'right' ? 'text-white' : 'text-white/80'}`}>
             {displayText}
           </p>
           {isLong && (
@@ -119,7 +119,7 @@ const ChatBubble = ({ review, shouldAnimate }) => {
             </button>
           )}
         </div>
-        <p className={`font-sans text-xs text-gray-500 mt-1 ${review.side === 'right' ? 'text-right' : 'text-left'}`}>
+        <p className={`font-sans text-xs text-white/60 mt-1 ${review.side === 'right' ? 'text-right' : 'text-left'}`}>
           {review.name}
         </p>
       </div>
@@ -159,7 +159,7 @@ const ReviewsChat = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 sm:py-32 bg-gradient-to-b from-cream to-lavender-light"
+      className="py-20 sm:py-32 bg-transparent"
       data-testid="reviews-section"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,13 +178,13 @@ const ReviewsChat = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="font-sans text-center text-gray-600 mb-12"
+          className="font-sans text-center text-white/70 mb-12"
         >
           Real reviews from real people
         </motion.p>
 
         {/* Chat container */}
-        <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl">
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-xl border border-white/15">
           {reviews.map((review, index) => (
             <ChatBubble 
               key={index} 
@@ -224,20 +224,20 @@ const ReviewsChat = () => {
                 href="https://www.instagram.com/nicestemsflowershop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-2xl rounded-tr-none p-4 bg-gradient-to-br from-blush to-lavender shadow-md hover:shadow-xl transition-shadow"
+                className="block rounded-2xl rounded-tr-none p-4 bg-gradient-to-br from-blush/80 to-lavender/80 shadow-md hover:shadow-xl transition-shadow"
                 data-testid="instagram-promo-link"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Instagram className="w-5 h-5 text-sage" />
-                  <p className="font-sans font-semibold text-gray-800">
+                  <p className="font-sans font-semibold text-white">
                     Check out our Instagram!
                   </p>
                 </div>
-                <p className="font-sans text-sm text-gray-700">
+                <p className="font-sans text-sm text-white/80">
                   Follow @nicestemsflowershop for daily inspiration and our latest creations 🌸
                 </p>
               </a>
-              <p className="font-sans text-xs text-gray-500 mt-1 text-right">
+              <p className="font-sans text-xs text-white/60 mt-1 text-right">
                 Nice Stems Florist
               </p>
             </div>
@@ -264,7 +264,7 @@ const ReviewsChat = () => {
             className="flex gap-3 flex-row"
           >
             <div 
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-white flex-shrink-0"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-white/20 flex-shrink-0"
             >
               <MapPin className="w-5 h-5 text-sage" />
             </div>
@@ -273,10 +273,10 @@ const ReviewsChat = () => {
                 href="https://maps.app.goo.gl/vKibmwLTcL7ZMq7y6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-2xl rounded-tl-none p-4 bg-white shadow-md hover:shadow-xl transition-shadow"
+                className="block rounded-2xl rounded-tl-none p-4 bg-white/10 backdrop-blur-md shadow-md hover:shadow-xl transition-shadow border border-white/15"
                 data-testid="google-maps-cta-link"
               >
-                <p className="font-sans text-sm text-gray-700 mb-2">
+                <p className="font-sans text-sm text-white/80 mb-2">
                   Want to see more reviews?
                 </p>
                 <p className="font-sans text-sm font-semibold text-sage">
