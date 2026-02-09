@@ -13,11 +13,11 @@ const VideoSection = ({ children }) => (
       <div className="video-pane">
         <video className="video-media" autoPlay muted loop playsInline preload="auto">
           <source
-            src={`${process.env.PUBLIC_URL}/images/111.webm`}
+            src="/images/111.webm"
             type="video/webm"
           />
           <source
-            src={`${process.env.PUBLIC_URL}/images/111.mp4`}
+            src="/images/111.mp4"
             type="video/mp4"
           />
         </video>
@@ -25,11 +25,11 @@ const VideoSection = ({ children }) => (
       <div className="video-pane">
         <video className="video-media" autoPlay muted loop playsInline preload="auto">
           <source
-            src={`${process.env.PUBLIC_URL}/images/222.webm`}
+            src="/images/222.webm"
             type="video/webm"
           />
           <source
-            src={`${process.env.PUBLIC_URL}/images/222.mp4`}
+            src="/images/222.mp4"
             type="video/mp4"
           />
         </video>

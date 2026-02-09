@@ -27,9 +27,11 @@ html {
 }
 
 .video-media {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   animation: video-soft-fade 8s ease-in-out infinite;
 }
 
